@@ -19,10 +19,17 @@ public class Main{
         System.out.println("student1 name before change: "+s1.name);
         callByValueObject(s1);
         System.out.println("student1 name after change: "+s1.name);
+        System.out.println("------------------------------------");
 
-        //System.out.println("student 1 name is: "+s1.name);
+        System.out.println("student 1 name before change is: "+s1.name);
 
-        // System.out.println("student 2 name is: "+s2.name);
+        System.out.println("student 2 name before change is: "+s2.name);
+
+        swap(s1,s2);
+
+        System.out.println("student 1 name after change is: "+s1.name);
+
+        System.out.println("student 2 name after change is: "+s2.name);
     }
     public static void callByValueInteger(int x){
         x = x +1;
@@ -37,8 +44,10 @@ public class Main{
 
         Student tmp = s1;
         s1 = s2;
-        s2 = s1;
+        s2 = tmp;
+        System.out.println("student 1 name in the method is: "+s1.name);
 
+        System.out.println("student 2 name in the method is: "+s2.name);
     }
 
 
