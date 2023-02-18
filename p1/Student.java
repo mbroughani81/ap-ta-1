@@ -13,6 +13,11 @@ public class Student {
         this.scope = scope;
     }
 
+    public Student(String name,String birthday,String id){
+        this.name = name;
+        this.birthday = birthday;
+        this.id = id;
+    }
     public void f1() {
         System.out.println("class level is => " + scope);
 
